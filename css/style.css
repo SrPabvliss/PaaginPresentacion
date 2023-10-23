@@ -292,6 +292,7 @@ h3 {
 .pagina {
     display: flex;
     justify-content: center;
+
     gap: 6rem;
     border-radius: 2rem;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(181, 181, 181, 1);
@@ -313,15 +314,67 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 4rem;
+
+}
+
+@media (max-width: 768px) {
+    .pagina__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .pagina__imagen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: full;
+    }
+
+    .pagina__contenido img {
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 0 !important;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .pagina__descripcion {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .pagina__contenido img {
+        border-radius: 0 !important;
+        width: 100%;
+        margin-left: 25%;
+    }
+}
+
+.pagina__imagen {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: full;
+
 }
 
 .pagina__contenido img {
-    width: 40%;
+    width: 100%;
+    height: fit-content;
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
 
 .pagina__descripcion {
+    flex: 1;
     padding: 4rem;
 }
 
@@ -339,10 +392,6 @@ h3 {
     border: none;
     max-width: 25rem;
 }
-
-
-
-
 
 /*Contacto*/
 
